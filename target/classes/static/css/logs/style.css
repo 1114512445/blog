@@ -1,0 +1,29 @@
+
+
+/*日记*/
+#content #riji{width:730px;background:#fff;}
+#riji .rj_content{width:710px;margin-top:10px;padding:0 10px;background:#fff;padding-bottom:10px;}
+.rj_content .shiguang{width:710px;height:145px;}
+.rj_content .shiguang .sg_ico{width:120px;height:145px; background:url("../images/line_bg.jpg") 60px 0px repeat-y;
+filter:Alpha(opacity=80);-moz-opacity: 0.8; opacity: 0.8;}
+.rj_content .shiguang .sg_ico img{border-radius:60px;margin-top:10px;}
+.rj_content .shiguang .sg_text{width:530px;height:100px;background:#fff;border:1px solid #E0DFDF;
+filter:Alpha(opacity=80);-moz-opacity: 0.8; opacity: 0.8;
+margin:10px 10px 0px 10px;position:relative;border-radius:5px;padding:10px;color:#4F4F4F;}
+.rj_content .shiguang .sg_text img{position:absolute;top:40px;left:-14px;z-index:1;}
+
+
+/*留言板*/
+#content #guestbook{width:730px;height:500px;background:#fff;}
+#guestbook .g_content{width:710px;height:300px;margin-top:10px;padding:0 10px;}
+
+
+
+
+
+
+
+
+
+
+
