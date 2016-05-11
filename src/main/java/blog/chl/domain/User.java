@@ -1,7 +1,5 @@
 package blog.chl.domain;
 
-import java.util.Date;
-
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection="user")
@@ -10,9 +8,7 @@ public class User {
 	private String id;
 	private String username;
 	private String password;
-	private String nickName;
-	private String headPortraitPath;
-	private Date joinDate;
+	private String joinDate;
 	private String spare;
 	public String getId() {
 		return id;
@@ -32,22 +28,11 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getNickName() {
-		return nickName;
-	}
-	public void setNickName(String nickName) {
-		this.nickName = nickName;
-	}
-	public String getHeadPortraitPath() {
-		return headPortraitPath;
-	}
-	public void setHeadPortraitPath(String headPortraitPath) {
-		this.headPortraitPath = headPortraitPath;
-	}
-	public Date getJoinDate() {
+
+	public String getJoinDate() {
 		return joinDate;
 	}
-	public void setJoinDate(Date joinDate) {
+	public void setJoinDate(String joinDate) {
 		this.joinDate = joinDate;
 	}
 	public String getSpare() {
@@ -58,8 +43,8 @@ public class User {
 	}
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", username=" + username + ", password=" + password + ", nickName=" + nickName
-				+ ", headPortraitPath=" + headPortraitPath + ", joinDate=" + joinDate + ", spare=" + spare + "]";
+		return "User [id=" + id + ", username=" + username + ", password=" + password 
+				 + ", joinDate=" + joinDate + ", spare=" + spare + "]";
 	}
 	
 }

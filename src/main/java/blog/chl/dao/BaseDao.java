@@ -10,5 +10,6 @@ public interface BaseDao<T> {
 	public void removeEntity(Query query);
 	public T findById(String id);
 	public List<T> findByQuery(Query query);
+	public List<T> findAll();
 	public List<T> pager(int page,int size);
 }

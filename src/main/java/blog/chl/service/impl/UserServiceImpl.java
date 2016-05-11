@@ -6,6 +6,6 @@ import blog.chl.dao.impl.BaseDaoImpl;
 import blog.chl.domain.User;
 
 @Service("userService")
-public class UserServiceImpl extends BaseDaoImpl<User> {
+public class UserServiceImpl extends BaseDaoImpl<User>{
 
 }

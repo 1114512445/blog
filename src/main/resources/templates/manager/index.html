@@ -1,0 +1,212 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link rel="shortcut icon" href="#" type="image/png"/>
+
+  <title>blog</title>
+
+  <!--icheck-->
+  <link href="manager_js/js/iCheck/skins/minimal/minimal.css" rel="stylesheet"/>
+  <link href="manager_js/js/iCheck/skins/square/square.css" rel="stylesheet"/>
+  <link href="manager_js/js/iCheck/skins/square/red.css" rel="stylesheet"/>
+  <link href="manager_js/js/iCheck/skins/square/blue.css" rel="stylesheet"/>
+
+  <!--dashboard calendar-->
+  <link href="manager_css/css/clndr.css" rel="stylesheet"/>
+
+  <!--Morris Chart CSS -->
+  <link rel="manager_css/stylesheet" href="manager_js/js/morris-chart/morris.css"/>
+
+  <!--common-->
+  <link href="manager_css/css/style.css" rel="stylesheet"/>
+  <link href="manager_css/css/style-responsive.css" rel="stylesheet"/>
+
+</head>
+
+<body class="sticky-header">
+
+<section>
+    <!-- left side start-->
+    <div class="left-side sticky-left-side">
+
+        <!--logo and iconic logo start-->
+        <div class="logo">
+            <a href="index.html"><img src="manager_images/images/logo.png" alt=""/></a>
+        </div>
+
+        <div class="logo-icon text-center">
+            <a href="index.html"><img src="manager_images/images/logo_icon.png" alt=""/></a>
+        </div>
+        <!--logo and iconic logo end-->
+
+        <div class="left-side-inner">
+
+            <!--头像 -->
+            <div class="visible-xs hidden-sm hidden-md hidden-lg">
+                <div class="media logged-user">
+                     <i class="fa fa-user"></i>
+                    <div class="media-body">
+                        <h4><a href="#">John Doe</a></h4>
+                        <span>"Hello There..."</span>
+                    </div>
+                </div>
+
+                <h5 class="left-nav-title">Account Information</h5>
+                <ul class="nav nav-pills nav-stacked custom-nav">
+                  <li><a href="#"><i class="fa fa-user"></i> <span>Profile</span></a></li>
+                  <li><a href="#"><i class="fa fa-cog"></i> <span>Settings</span></a></li>
+                  <li><a href="#"><i class="fa fa-sign-out"></i> <span>Sign Out</span></a></li>
+                </ul>
+            </div>
+
+            <!--sidebar nav start-->
+            <ul class="nav nav-pills nav-stacked custom-nav">
+                <li class="active"><a href="#"><i class="fa fa-home"></i> <span>个人主页</span></a></li>
+
+                <li class="menu-list"><a href=""><i class="fa fa-cogs"></i> <span>用户管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="/userList">用户列表</a></li>
+                        <li><a href="grids.html"> Grids</a></li>
+                        <li><a href="gallery.html"> Media Gallery</a></li>
+                        <li><a href="calendar.html"> Calendar</a></li>
+                        <li><a href="tree_view.html"> Tree View</a></li>
+                        <li><a href="nestable.html"> Nestable</a></li>
+
+                    </ul>
+                </li>
+
+                <li class="menu-list"><a href=""><i class="fa fa-tasks"></i> <span>相册管理</span></a>
+                    <ul class="sub-menu-list">
+                       <li><a href="/photoalbum"> 查看相册</a></li>
+                        <li><a href="form_layouts.html"> Form Layouts</a></li>
+                        <li><a href="form_wizard.html"> Form Wizards</a></li>
+                        <li><a href="form_validation.html"> Form Validation</a></li>
+                        <li><a href="editors.html"> Editors</a></li>                     
+                        <li><a href="pickers.html"> Pickers</a></li>                  
+                    </ul>
+                </li>
+ 
+                <li class="menu-list"><a href="#"><i class="fa fa-th-list"></i> <span>留言管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="basic_table.html"> Basic Table</a></li>
+                        <li><a href="dynamic_table.html"> Advanced Table</a></li>
+                        <li><a href="responsive_table.html"> Responsive Table</a></li>
+                        <li><a href="editable_table.html"> Edit Table</a></li>
+                    </ul>
+                </li>
+                
+                                <li class="menu-list"><a href="#"><i class="fa fa-th-list"></i> <span>文章管理</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="basic_table.html"> 文章</a></li>
+                    </ul>
+                </li>
+                
+
+                <li class="menu-list"><a href=""><i class="fa fa-file-text"></i> <span>关于我</span></a>
+                    <ul class="sub-menu-list">
+                        <li><a href="profile.html"> 个人简介</a></li>
+                    </ul>
+                </li>
+               
+
+            </ul>
+            <!--sidebar nav end-->
+
+        </div>
+    </div>
+    <!-- left side end-->
+    
+    <!-- main content start-->
+    <div class="main-content" >
+
+        <!-- header section start-->
+        <div class="header-section">
+
+            <!--toggle button start-->
+            <a class="toggle-btn"><i class="fa fa-bars"></i></a>
+            <!--toggle button end-->
+
+            <!--搜索-->
+            <form class="searchform" action="index.html" method="post">
+                <input type="text" class="form-control" name="keyword" placeholder="Search here..." />
+            </form>
+            <!--search end-->
+
+            <!--头像  退出 -->
+            <div class="menu-right">
+                <ul class="notification-menu">
+                    <li>
+                        <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <img src="manager_images/images/photos/user-avatar.png" alt="" />
+                            John Doe
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
+                            <li><a href="#"><i class="fa fa-user"></i>  Profile</a></li>
+                            <li><a href="#"><i class="fa fa-cog"></i>  Settings</a></li>
+                            <li><a href="#"><i class="fa fa-sign-out"></i> Log Out</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+            <!--notification menu end -->
+
+        </div>
+        <!-- header section end-->
+
+        <!-- 位置-->
+        <div class="page-heading">
+            <h3>
+                Dashboard
+            </h3>
+            <ul class="breadcrumb">
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li class="active"> My Dashboard </li>
+            </ul>
+
+        </div>
+        <!-- page heading end-->
+
+
+        </div>
+        <!--body wrapper end-->
+
+        <!--footer section start-->
+        <!-- <footer>
+            2014 &copy; CHL by ThemeBucket
+        </footer> -->
+        <!--footer section end-->
+
+
+  
+    <!-- main content end-->
+</section>
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="manager_js/js/jquery-1.10.2.min.js"></script>
+<script src="manager_js/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="manager_js/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="manager_js/js/bootstrap.min.js"></script>
+<script src="manager_js/js/modernizr.min.js"></script>
+<script src="manager_js/js/jquery.nicescroll.js"></script>
+
+
+
+
+<!--icheck -->
+<script src="manager_js/js/iCheck/jquery.icheck.js"></script>
+<script src="manager_js/js/icheck-init.js"></script>
+
+
+
+
+<!--common scripts for all pages-->
+<script src="manager_js/js/scripts.js"></script>
+
+
+
+
+</body>
+</html>

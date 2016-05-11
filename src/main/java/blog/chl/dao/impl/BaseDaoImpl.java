@@ -24,7 +24,7 @@ public abstract class BaseDaoImpl<T> implements BaseDao<T> {
 	private MongoTemplate template;
 	
 	public void saveEntity(T entity) {
-		System.out.println(template);
+		
 		template.save(entity);
 	}
 
@@ -59,6 +59,13 @@ public abstract class BaseDaoImpl<T> implements BaseDao<T> {
 		List<T> entities = template.find(query, clazz);
 		
 		return entities;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<T> findAll() {
+		
+		
+		return template.findAll(clazz);
 	}
 
 }
