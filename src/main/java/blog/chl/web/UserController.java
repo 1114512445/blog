@@ -91,6 +91,12 @@ public class UserController {
 		return "manager/photo";
 	}
 	
+	@RequestMapping("/messageManager")
+	public String messageManager(){
+		
+		return "manager/messageManager";
+	}
+	
 	
 	@RequestMapping("/saveOrUpdateUser")
 	@ResponseBody

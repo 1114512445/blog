@@ -1,11 +1,22 @@
-<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <link rel="shortcut icon" href="#" type="image/png"/>
-  <title>图片管理</title>
-  <link href="manager_css/css/style.css" rel="stylesheet"/>
-  <link href="manager_css/css/style-responsive.css" rel="stylesheet"/>
-  <!-- upload -->
-  <link rel="stylesheet" href="zyupload/skins/zyupload-1.0.0.min.css " type="text/css"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="ThemeBucket">
+  <link rel="shortcut icon" href="#" type="image/png">
+
+  <title>Media Gallery</title>
+
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-responsive.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
 </head>
 
 <body class="sticky-header">
@@ -16,16 +27,17 @@
 
         <!--logo and iconic logo start-->
         <div class="logo">
-            <a href="index.html"><img src="manager_images/images/logo.png" alt=""/></a>
+            <a href="index.html"><img src="images/logo.png" alt=""></a>
         </div>
 
         <div class="logo-icon text-center">
-            <a href="index.html"><img src="manager_images/images/logo_icon.png" alt=""/></a>
+            <a href="index.html"><img src="images/logo_icon.png" alt=""></a>
         </div>
         <!--logo and iconic logo end-->
 
 
         <div class="left-side-inner">
+            <!--sidebar nav start-->
             <ul class="nav nav-pills nav-stacked custom-nav">
                 <li><a href="index.html"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
                 <li class="menu-list"><a href=""><i class="fa fa-laptop"></i> <span>Layouts</span></a>
@@ -37,7 +49,8 @@
 
                     </ul>
                 </li>
-
+              
+             
                 <li><a href="login.html"><i class="fa fa-sign-in"></i> <span>Login Page</span></a></li>
 
             </ul>
@@ -58,10 +71,12 @@
         <!--toggle button end-->
 
 
+        <!--search end-->
 
         <!--notification menu start -->
         <div class="menu-right">
-            <ul class="notification-menu">                                  
+            <ul class="notification-menu">
+  
                 <li>
                     <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                         <i class="fa fa-user"></i>
@@ -85,59 +100,38 @@
         <!-- page heading start-->
         <div class="page-heading">
             <h3>
-                图片管理
+                Media Gallery
             </h3>
             <ul class="breadcrumb">
                 <li>
-                    <a href="#">相册管理</a>
+                    <a href="#">Dashboard</a>
                 </li>
-                <li class="active">
-                	<a href="#">我的相册</a>
-                	</li>
-                <li class="active">我的图片</li>
+                <li class="active"> Media Gallery </li>
             </ul>
         </div>
         <!-- page heading end-->
-
+</div>
         <!--body wrapper start-->
         <div class="wrapper">
             <div class="row">
                 <div class="col-sm-12">
                     <section class="panel">
                         <header class="panel-heading">
-                            我的图片
+                            Media Manager
                             <span class="tools pull-right">
-                                <a href="javascript:;" class="fa fa-chevron-down"></a>
+                                <a href="javascript:;" class="fa fa-chevron-down"></a>                    
                              </span>
                         </header>
                         <div class="panel-body">
 
-		 <!-- 上传图片 -->
-        <div class="images item media-filter">
-        
-          		<a href="#myModal2" id="editAlbum" data-toggle="modal"><i class="fa fa-upload"></i></a>       
-        			</div> 
 
-                            <div id="gallery" class="media-gal">
-                                <div class="images item " >
-                                    <a href="#myModal" data-toggle="modal">
-                                        <img src="manager_images/images/gallery/image1.jpg" alt="" />
-                                    </a>
-                                    <p>图片1</p>
-                                </div>
-
-                                <div class=" audio item " >
-                                    <a href="#myModal" data-toggle="modal">
-                                        <img src="manager_images/images/gallery/image2.jpg" alt="" />
-                                    </a>
-                                    <p>图片2</p>
-                                </div>
 
 
                             </div>
 
-						 
-  						<!-- Modal -->
+
+
+                        		<!-- Modal -->
                             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
@@ -177,30 +171,55 @@
                             </div>
                             <!-- modal -->
                             
-                            <!-- Modal2 -->
-                            <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                         
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>                                           
-                                        </div> 
+                                                       <!-- modal2 -->
 
-                                       <div class="modal-body row">                                                                          
-                                      	<div id="zyupload" class="zyupload"></div> 
-                                      </div>
-  							 </div>                               
-                           
+								  <!-- Modal -->
+                            <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title">添加相册</h4>
+                                        </div>
+
+                                        <div class="modal-body row">
+
+                                            <div class="col-md-5 img-modal">
+                                                <img src="manager_images/images/background.jpg" alt=""/>                          
+                                            </div>
+                                            <div class="col-md-7">
+                                                <div class="form-group">
+                                                    <label> 相册名称</label>
+                                                    <input id="name" class="form-control"/>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label> 描述</label>
+                                                    <textarea rows="2" class="form-control"></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>图片路径</label>
+                                                    <input id="link" value="manager_images/images/background.jpg" class="form-control" disabled="disabled" />
+                                                </div>
+                                                <div class="pull-right">
+                                                    <a class="btn btn-success btn-sm" type="button">保存</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
                             <!-- modal2 -->
                             
 
                         </div>
-                    </section>                                       
+                    </section>
                 </div>
             </div>
         </div>
+       
         <!--body wrapper end-->
-        
-        
-  
 
         <!--footer section start-->
         <footer>
@@ -214,21 +233,17 @@
 </section>
 
 <!-- Placed js at the end of the document so the pages load faster -->
-<script src="manager_js/js/jquery-1.10.2.min.js"></script>
-<script src="manager_js/js/jquery-ui-1.9.2.custom.min.js"></script>
-<script src="manager_js/js/jquery-migrate-1.2.1.min.js"></script>
-<script src="manager_js/js/bootstrap.min.js"></script>
-<script src="manager_js/js/modernizr.min.js"></script>
-<script src="manager_js/js/jquery.nicescroll.js"></script>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/modernizr.min.js"></script>
+<script src="js/jquery.nicescroll.js"></script>
 
-<script src="manager_js/js/jquery.isotope.js"></script>
-
-	
-<!-- upload -->
-<script type="text/javascript" src="zyupload/zyupload-1.0.0.min.js"></script>
+<script src="js/jquery.isotope.js"></script>
 
 <!--common scripts for all pages-->
-<script src="manager_js/js/scripts.js"></script>
+<script src="js/scripts.js"></script>
 
 <script type="text/javascript">
     $(function() {
@@ -250,50 +265,6 @@
         });
     });
 </script>
-	  <script type="text/javascript">
-			$(function(){
-				// 初始化插件
-				$("#zyupload").zyUpload({
-					width            :   "650px",                 // 宽度
-					height           :   "400px",                 // 宽度
-					itemWidth        :   "140px",                 // 文件项的宽度
-					itemHeight       :   "115px",                 // 文件项的高度
-					url              :   "/upload/UploadAction",  // 上传文件的路径
-					fileType         :   ["jpg","png","txt","js","exe"],// 上传文件的类型
-					fileSize         :   51200000,                // 上传文件的大小
-					multiple         :   true,                    // 是否可以多个文件上传
-					dragDrop         :   true,                    // 是否可以拖动上传文件
-					tailor           :   true,                    // 是否可以裁剪图片
-					del              :   true,                    // 是否可以删除文件
-					finishDel        :   false,  				  // 是否在上传文件完成后删除预览
-					/* 外部获得的回调接口 */
-					onSelect: function(selectFiles, allFiles){    // 选择文件的回调方法  selectFile:当前选中的文件  allFiles:还没上传的全部文件
-						console.info("当前选择了以下文件：");
-						console.info(selectFiles);
-					},
-					onDelete: function(file, files){              // 删除一个文件的回调方法 file:当前删除的文件  files:删除之后的文件
-						console.info("当前删除了此文件：");
-						console.info(file.name);
-					},
-					onSuccess: function(file, response){          // 文件上传成功的回调方法
-						console.info("此文件上传成功：");
-						console.info(file.name);
-						console.info("此文件上传到服务器地址：");
-						console.info(response);
-						$("#uploadInf").append("<p>上传成功，文件地址是：" + response + "</p>");
-					},
-					onFailure: function(file, response){          // 文件上传失败的回调方法
-						console.info("此文件上传失败：");
-						console.info(file.name);
-					},
-					onComplete: function(response){           	  // 上传完成的回调方法
-						console.info("文件上传完成");
-						console.info(response);
-					}
-				});
-				
-			});
-		
-		</script> 
+
 </body>
 </html>
